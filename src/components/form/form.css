@@ -1,0 +1,10 @@
+.deslocamentoDate{
+    display: flex;
+    justify-content: right;
+}
+
+.date{
+    width: 20% !important;
+    text-align: center !important;
+    border: 1px solid rgb(194, 194, 194) !important;
+}
