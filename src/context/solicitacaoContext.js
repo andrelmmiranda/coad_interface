@@ -6,7 +6,9 @@ export const SolicitacaoProvider = ({ children })=>{
     const [ solicitacoes, setSolicitacoes ] = useState([]);
 
     function addSolicitacao(solicitacao){
-        setSolicitacoes(solicitacao);
+        setSolicitacoes([ 
+            ...solicitacoes, solicitacao 
+        ]);
     }
 
     return(
