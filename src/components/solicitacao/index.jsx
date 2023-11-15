@@ -1,5 +1,10 @@
+import { Container } from "react-bootstrap";
+import { FormularioSolicitacao } from "../form";
+
 export function Solicitacao(){
     return(
-      <h1>Página de solicitação</h1>
+        <Container>
+            <FormularioSolicitacao />
+        </Container>
     );
 }
