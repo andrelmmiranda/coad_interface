@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { createContext, useState } from "react";
 
-export const SolicitacaoContext = useContext();
+export const SolicitacaoContext = createContext();
 
-export const solicitacaoProvider = ({ children })=>{
+export const SolicitacaoProvider = ({ children })=>{
     const [ solicitacoes, setSolicitacoes ] = useState([]);
 
     function addSolicitacao(solicitacao){
@@ -13,5 +13,5 @@ export const solicitacaoProvider = ({ children })=>{
         <SolicitacaoContext.Provider value={{ solicitacoes, addSolicitacao }}>
             { children }
         </SolicitacaoContext.Provider>
-    )
+    );
 }
