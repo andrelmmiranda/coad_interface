@@ -7,11 +7,14 @@ import { Solicitacao } from '../../models/solicitacao';
 import { data } from '../../utils/data';
 
 import './form.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react'; 
+import { SolicitacaoContext } from '../../context/solicitacaoContext';
 
 export function FormularioSolicitacao() {
     const [ date, setDate ] = useState(undefined);
     const [ input, setInput ] = useState({});
+
+    const { solicitacoes, addSolicitacao } = useContext(SolicitacaoContext);
 
     useEffect(()=>{
         setDate(data());
@@ -31,8 +34,7 @@ export function FormularioSolicitacao() {
 
     function handleSubmit(e){
         e.preventDefault();
-        const s = new Solicitacao(input);
-        console.log(s);
+        addSolicitacao(new Solicitacao(input));
         clear();
     }
 
