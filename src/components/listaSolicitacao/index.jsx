@@ -8,7 +8,7 @@ export function ListaSolicitao(){
     const { solicitacoes } = useContext(SolicitacaoContext);
     return(
       <Container>
-        <Lista items={ solicitacoes } />
+        <Lista solicitacoes={ solicitacoes } />
       </Container>
     )
 }
